@@ -1,9 +1,7 @@
 #include <stdio.h>
-#define COUNT 100000000
+#define COUNT 10000000
 
 int isprime(int n){
-    if (n%2==0 && n!=2)
-      return 0;
 
     int div =3;
     while(div * div <= n) {
@@ -11,17 +9,21 @@ int isprime(int n){
         return 0;
       div += 2;
     };
-    if(n>=2)
-      return 1;
+
+    return 1;
 };
 
 int main() {
   int num_primes = 0;
-  int i = 0;
+  int counter =0;
+  int i = 3;
   while (i <= COUNT) {
       num_primes += isprime(i);
-    i ++;
-  }
+    i += 2;
+    counter ++;
+  };
+  num_primes += 1;
+  printf("%d\n", counter);
   printf("there are %d primes from 1 to 10000000\n", num_primes);
   return 0;
 }
