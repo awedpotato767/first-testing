@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define COUNT 100000000
+#define COUNT 10000000
 
 int isprime(int n){
     if (n%2==0 && n!=2)
