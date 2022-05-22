@@ -19,7 +19,7 @@ int main() {
   int num_primes = 0;
   int i = 0;
   while (i <= COUNT) {
-      num_primes += isprime(i);
+    num_primes += isprime(i);
     i ++;
   }
   printf("there are %d primes from 1 to 10000000\n", num_primes);
